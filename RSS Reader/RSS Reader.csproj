@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0-android</TargetFramework>
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
@@ -11,6 +11,8 @@
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Resources\animator\slide_down.xml" />
+    <None Remove="Resources\animator\slide_up.xml" />
     <None Remove="Resources\layout-port\activity_rssfeed.xml" />
     <None Remove="Resources\layout\activity_rssfeed.xml" />
     <None Remove="Resources\layout\fragment_rssitem_detail.xml" />

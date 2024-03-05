@@ -7,6 +7,7 @@ namespace RSS_Reader.Activities;
 public class RssfeedActivity : Activity, MyListFragment.OnItemSelectedListener
 {
     SelectionStateFragment stateFragment;
+    private bool _shouldAnimate = true;
 
     protected override void OnCreate(Bundle? savedInstanceState)
     {
@@ -47,9 +48,10 @@ public class RssfeedActivity : Activity, MyListFragment.OnItemSelectedListener
         FragmentManager.BeginTransaction()
             .Replace(Resource.Id.fragment_container, myListFragment)
             .Commit();
-
+        _shouldAnimate = true;
         if (stateFragment.LastSelection.Length > 0)
         {
+            _shouldAnimate = false;
             onRssItemSelected(stateFragment.LastSelection);
             return;
         }
@@ -73,6 +75,10 @@ public class RssfeedActivity : Activity, MyListFragment.OnItemSelectedListener
             FragmentTransaction transaction = FragmentManager.BeginTransaction();
             // Replace whatever is in the fragment_container view with this fragment,
             // and add the transaction to the back stack so the user can navigate back
+            if (_shouldAnimate)
+            {
+                transaction.SetCustomAnimations(Resource.Animator.slide_up, Resource.Animator.slide_down);
+            }
             transaction.Replace(Resource.Id.fragment_container, newFragment);
             transaction.AddToBackStack(null);
             transaction.Commit();
