@@ -1,10 +1,11 @@
+using AndroidX.AppCompat.App;
 using RSS_Reader.Fragments;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace RSS_Reader.Activities;
 
 [Activity(Label = "@string/app_name", MainLauncher = true)]
-public class RssfeedActivity : Activity, MyListFragment.OnItemSelectedListener
+public class RssfeedActivity : AppCompatActivity, MyListFragment.OnItemSelectedListener
 {
     SelectionStateFragment stateFragment;
     private bool _shouldAnimate = true;

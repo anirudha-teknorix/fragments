@@ -20,4 +20,8 @@
     <None Remove="Resources\values-port\config.xml" />
     <None Remove="Resources\values\config.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.7.1.1" />
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.6.1.7" />
+  </ItemGroup>
 </Project>
