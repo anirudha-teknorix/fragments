@@ -1,0 +1,45 @@
+# Ignore Android build and output directories
+obj/
+bin/
+*.apk
+*.aab
+*.apk.keystore
+
+# Ignore Visual Studio files
+.vs/
+*.userprefs
+*.suo
+*.user
+*.sln.docstates
+
+# Ignore NuGet packages
+packages/
+
+# Ignore build logs and other temporary files
+*.log
+*.vspscc
+*.vssscc
+_buildLogs/
+*.swp
+
+# Ignore ReSharper and Rider specific files
+_ReSharper*/
+*.sln.iml
+*.suo
+*.sw??
+*.resharper
+*.resharper.user
+*.resharper.options
+
+# Ignore Rider specific files
+.idea/
+
+# Ignore Visual Studio Code specific files
+.vscode/
+
+# Ignore Android Studio specific files
+.gradle/
+.idea/
+*.iml
+*.iws
+*.ipr
